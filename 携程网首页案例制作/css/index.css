@@ -1,0 +1,273 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* body{
+    height: 2000px;
+} */
+.search-box{
+    display: flex;
+    /* 固定定位 */
+    /* 固定的盒子应该有宽度 */
+    position: fixed;
+    top: 0;
+    /* 向左移动50% */
+    left: 50%;
+    /* 居中 */
+    transform: translateX(-50%);
+    /* 兼容老版本浏览器 */
+    -webkit-transform: translateX(-50%);
+    min-width: 320px;
+    max-width: 520px;
+    width: 100%;
+    height:44px;
+    /* background-color: pink; */
+    background-color: #f6f6f6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+div{
+    box-sizing: border-box;
+}
+.search{ 
+    flex: 1;
+    position: relative;
+    font-size: 12px;
+    color: #666;
+    line-height: 24px;
+    padding-left: 25px;
+    height: 26px;
+    border: 1px solid #ccc;
+    margin: 7px 10px;
+    /* 小圆角操作 */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+.search::before{
+    content: "";
+    position: absolute;
+    /* display: block; */
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/shou1.png) no-repeat -59px -279px;
+    background-size: 104px auto;
+}
+.user{
+    width: 44px;
+    height: 44px;
+    background-color: blue;
+    font-size: 12px;
+    text-align: center;
+    color: #2eaae0;
+}s
+.user a::before{
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/shou1.png) no-repeat -59px -194px;
+    background-size: 104px auto;
+    margin: 4px auto -2px;
+}
+ul  {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+/* focus模块 */
+/* 向上44px */
+.focus{
+    padding-top: 44px;
+}
+
+.box img{
+    width: 100%;
+}
+/* 局部导航栏模块 */
+.local-nav{
+    display: flex;
+    height: 64px;
+    background-color: #fff;
+    margin: 3px 4px;
+    /* 小圆角 */
+    border-radius: 8px;
+}
+.local-nav li{
+    flex: 1;
+
+}
+.local-nav a{
+    display: flex;
+        /* 主轴设置为y轴 */
+    flex-direction: column;
+        /* 侧轴居中对齐 */
+    align-items: center;
+    font-size: 12px;
+}
+/* 以local-nav-icon开头的属性选择器 */
+.local-nav li [class^="local-nav-icon"] {
+    margin-top: 8px;
+    width: 32px;
+    height: 32px;
+    /* background-color: pink; */
+    background: url(../images/kugu.png) no-repeat 0 0;
+    background-size: 32px auto;
+}
+.local-nav li .local-nav-icon-icon2{
+    background-position:0 -32px;
+}
+.local-nav li .local-nav-icon-icon3{
+    background-position:0 -64px;
+}
+.local-nav li .local-nav-icon-icon4{
+    background-position:0 -96px;
+}
+.local-nav li .local-nav-icon-icon5{
+    background-position:0 -128px;
+}
+/* 主导航栏 */
+nav{
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+}
+.nav-common{
+    display: flex;
+    height: 88px;
+    background-color: pink;
+}
+/* 第二个盒子 */
+.nav-common:nth-child(2){
+    margin: 3px 0;
+}
+.nav-items{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.nav-items a{
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    font-size: 14px;
+    /* 文字阴影 */
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+}
+.nav-items a:nth-child(1){
+    border-bottom: 1px solid #fff;
+}
+/* 第一列的a不需要下划线 */
+.nav-items:nth-child(1) a{
+    border: 0;
+    background: url(../images/jiudian.png) no-repeat bottom center;
+}
+
+/* 前两个div/ */
+.nav-items:nth-child(-n+2){
+    border-right: 1px solid #fff;
+}
+.nav-common:nth-child(1){
+    background: -webkit-linear-gradient(left,#fa5f55 ,#fa994d);
+}
+.nav-common:nth-child(2){
+    background: -webkit-linear-gradient(left,#4b90ed ,#53bced);
+}
+.nav-common:nth-child(3){
+    background: -webkit-linear-gradient(left,#34c2a9 ,#6cd559);
+}
+/* 侧导航栏 */
+.subnav-entry{
+    display: flex;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+    /* 换行 */
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.subnav-entry li{
+    /* flex子盒子可以写百分比%  相对于父级来说*/
+    flex: 20%;
+}
+.subnav-entry a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subnav-entry-icon{
+    width: 28px;
+    height: 28px;
+    background-color: pink;
+    margin-top: 4px;
+    background: url(../images/un.png) no-repeat;
+    background-size: 28px auto;
+}
+/* salex-box */
+.sales-box{
+    border: 1px solid #bbb;
+    background-color: #fff;
+    margin: 4px;
+}
+.sales-hd{
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+}
+/* 搜索引擎优化 */
+.sales-hd  h2{
+    position: relative;
+    text-indent: -999px;
+    overflow: hidden;
+}
+.sales-hd h2::after{
+    position: absolute;
+    content: "";
+    top: 14px;
+    left: 20px;
+    width: 79px;
+    height: 15px;
+    background:url(../images/remen.png) no-repeat 0 -20px;
+    background-size: 79px auto;
+}
+.more{
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    background: -webkit-linear-gradient(left,#ff506c,#ff6bc6);
+    border-radius: 15px;
+    padding: 3px 20px 3px 10px;
+    /* 文字颜色变为白色 */
+    color: #fff;
+}
+/* 三角制作 */
+.more::after{
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+.row{
+    display: flex;
+}
+.row a{
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+.row a:nth-child(1){
+    border-right: 1px solid #ccc;
+}
+.row a img{
+    width: 100%;
+}
