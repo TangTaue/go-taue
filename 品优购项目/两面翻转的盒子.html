@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 400px;
+        }
+        .box{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            transition: all .4s;
+            /* 让后面的紫色盒子保留立体空间 */
+            transform-style: preserve-3d;
+        }
+        .box:hover{
+            transform: rotateY(180deg);
+        }
+        .front,.back{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            /* 圆形 */
+            border-radius: 50%;
+            /* 文字样式 */
+            font-size: 30px;
+            color: #ffff;
+            text-align: center;
+            line-height: 300px;
+        }
+        .front{
+            background-color: pink;
+            z-index: 1;
+        }
+        .back{
+            background-color: purple;
+            transform: rotateY(180deg);
+      }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="front">hello</div>
+        <div class="back">world</div>
+    </div>
+</body>
+</html>

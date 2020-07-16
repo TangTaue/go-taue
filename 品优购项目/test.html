@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var foo="hello";
+        // (function(){
+        //     var bar="world";
+        //     alert(foo+bar);
+        // })();
+        // alert(foo+bar);
+        function out(x) {
+            var temp=2;
+            function inside(y) {
+                document.write(x+y+(temp--))
+            }
+            inside(5)
+        }
+        out(3)
+    </script>
+</head>
+<body>
+    <!-- <div style="color: red; text-color:blue;">
+        <span style="color: green; text-color:black;"> 
+            hello
+        </span>
+    </div> -->
+</body>
+</html>
